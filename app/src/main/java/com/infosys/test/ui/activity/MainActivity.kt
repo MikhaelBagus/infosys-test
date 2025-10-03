@@ -3,6 +3,7 @@ package com.infosys.test.ui.activity
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.infosys.test.databinding.ActivityMainBinding
@@ -29,19 +30,22 @@ class MainActivity : AppCompatActivity() {
                 is UiState.Loading -> {
                     binding.progressBar.visibility = View.VISIBLE
                     binding.recyclerView.visibility = View.GONE
-                    binding.tvError.visibility = View.GONE
                 }
                 is UiState.Success -> {
                     binding.progressBar.visibility = View.GONE
                     binding.recyclerView.visibility = View.VISIBLE
-                    binding.tvError.visibility = View.GONE
                     binding.recyclerView.adapter = UserAdapter(state.data)
                 }
                 is UiState.Error -> {
                     binding.progressBar.visibility = View.GONE
                     binding.recyclerView.visibility = View.GONE
-                    binding.tvError.visibility = View.VISIBLE
-                    binding.tvError.text = state.message
+
+                    // 🔹 Tampilkan AlertDialog
+                    AlertDialog.Builder(this)
+                        .setTitle("Error")
+                        .setMessage(state.message)
+                        .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+                        .show()
                 }
             }
         }
