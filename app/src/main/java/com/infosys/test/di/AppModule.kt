@@ -1,5 +1,6 @@
 package com.infosys.test.di
 
+import com.infosys.test.data.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

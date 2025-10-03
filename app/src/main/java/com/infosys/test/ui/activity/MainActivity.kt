@@ -5,6 +5,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.infosys.test.databinding.ActivityMainBinding
 import com.infosys.test.ui.adapter.UserAdapter
 import com.infosys.test.ui.viewmodel.UiState
 import com.infosys.test.ui.viewmodel.UserViewModel

@@ -3,6 +3,7 @@ package com.infosys.test.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.infosys.test.databinding.ItemUserBinding
 import com.infosys.test.model.User
 
 class UserAdapter(private val users: List<User>) :

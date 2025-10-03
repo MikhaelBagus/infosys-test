@@ -1,0 +1,41 @@
+# Gradle
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration
+local.properties
+*.keystore
+*.jks
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+output.json
+
+# Kotlin/Java
+*.class
+*.log
+*.ctxt
+
+# Generated files
+bin/
+gen/
+out/
+
+# Other
+*.swp
+*.tmp
+*.orig
+*.rej
+*.bak
+
+# OS files
+Thumbs.db
